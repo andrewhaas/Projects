@@ -1,0 +1,23 @@
+#indef FOOD_ITEM_H
+#define FOOD_ITEM_H
+
+#include<string>
+
+class food_item
+{
+ public:
+  food_item();
+  food_item(std::string upc_num, int lifetime, std::string name);
+  ~food_item();
+  void  decrease_lifetime();
+  std::string get_name();
+  int get_lifetime();
+  std::string get_upc();
+  std::string to_string();
+ 
+ private:
+  std::string name;
+  std::string upc;
+  int lifetime;
+};
+#endif

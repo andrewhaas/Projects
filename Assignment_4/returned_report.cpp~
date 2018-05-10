@@ -1,0 +1,31 @@
+#include <iostream>  
+#include <string>
+#include <stdlib.h>
+#include <set>
+#include <map>
+#include <fstream>
+#include <vector>
+#include <iterator>
+#include "report.h"
+#include "food_item.h"
+#include "warehouse.h"
+
+using namespace std;
+
+int main(int argc, char* argv[])
+{
+if(argc>2){
+  cout<<"You have entered to many parameters, please enter only a filepath"<<endl;
+  return 1;
+}
+ if(argc<2){
+   cout<<"you have entered to few parameters, please enter a filepath"<<endl;
+   return 1;
+ }
+ report _report;
+ r.create_report(argv[1]);
+ cout<<"Report by Andrew Haas"<<endl;
+ cout<<"\n";
+ cout<<"Underfilled orders:"<<endl;
+
+}

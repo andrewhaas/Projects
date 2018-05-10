@@ -1,0 +1,25 @@
+#ifndef REQUEST_H
+#define REQUEST_H
+
+#include <map>
+#include <set> 
+#include <string>
+#include <iterator>
+#include <iostream>
+#include "food_item.h"
+#include "warehouse.h"
+ 
+class request
+{
+ private: 
+  std::string requested;
+  bool filled;
+ public:
+  request();
+  request(std::string);
+  ~request();
+  std::string get_request();
+  void complete_request();
+  bool is_filled();
+};
+#endif

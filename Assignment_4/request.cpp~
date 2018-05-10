@@ -1,0 +1,38 @@
+#ifndef 
+
+
+#include <map>
+#include <set> 
+#include <string>
+#include <iterator>
+#include <iostream>
+#include "food_item.h"
+#include "warehouse.h"
+#include "request.h"
+
+using namespace std;
+
+request::request(){
+
+}
+
+request::request(string _request){
+  request = _request;
+  filled = false;
+}
+
+request::~request(){
+
+}
+
+string request::get_request(){
+  return request;
+}
+
+void request::complete_request(){
+  filled = true;
+}
+
+bool request::is_filled(){
+  return filled;
+}

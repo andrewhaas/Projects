@@ -1,0 +1,26 @@
+#ifndef WAREHOUSE_H
+#define WAREHOUSE_H
+
+#include <string>
+#include <vector>
+#include <map>
+#include "food_item.h"
+
+class warehouse
+{
+ private:
+  std::string name;
+  std::map<std::string, std::vector<food_item> > inventory;
+
+ public:
+  warehouse();
+  warehouse(std::string name, std::map<std::string, food_item> items);
+  ~warehouse();
+  std::map<std::string, std::vector<food_item> > get_all();
+  std::string to_string();
+  void add_item(food_item item, int number);
+  void remove_item(food_item item, int number);
+  void update();
+
+};
+#endif
